@@ -19,7 +19,7 @@ class RechthoekTest {
     }
 
     @Test
-    void deOmtrekVanEenRechthoekLengte4Breedte3() {
+    void deOmtrekVanEenRechthoekLengte4Breedte3Is14() {
         assertThat(rechthoek.getOmtrek()).isEqualTo(14);
     }
 }
