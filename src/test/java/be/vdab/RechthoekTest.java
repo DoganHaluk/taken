@@ -3,14 +3,14 @@ package be.vdab;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 class RechthoekTest {
     private Rechthoek rechthoek;
 
     @BeforeEach
     void beforeEach() {
-        rechthoek = new Rechthoek(3, 4);
+        rechthoek = new Rechthoek(4, 3);
     }
 
     @Test
@@ -25,10 +25,26 @@ class RechthoekTest {
 
     @Test
     void recthoekenMetHetzelfdeLengteEnBreedteZijnGelijk() {
-        assertThat(new Rechthoek(3,5)).isEqualTo(new Rechthoek(3,5));
+        assertThat(new Rechthoek(5, 3)).isEqualTo(new Rechthoek(5, 3));
     }
+
     @Test
     void recthoekenMetVerschillendLengteOfBreedteZijnVerschillend() {
-        assertThat(new Rechthoek(3,5)).isNotEqualTo(new Rechthoek(3,6));
+        assertThat(new Rechthoek(5, 3)).isNotEqualTo(new Rechthoek(5, 2));
+    }
+
+    @Test
+    void deLengteMagNietNegatiefZijn() {
+        assertThatIllegalArgumentException().isThrownBy(() -> new Rechthoek(-2, 5));
+    }
+
+    @Test
+    void deBreedteMagNietNegatiefZijn() {
+        assertThatIllegalArgumentException().isThrownBy(() -> new Rechthoek(5, -2));
+    }
+
+    @Test
+    void deBreedteMagNietGroterDanLengte() {
+        assertThatIllegalArgumentException().isThrownBy(() -> new Rechthoek(4, 5));
     }
 }

@@ -7,8 +7,12 @@ public class Rechthoek {
     private final int breedte;
 
     public Rechthoek(int lengte, int breedte) {
-        this.lengte = lengte;
-        this.breedte = breedte;
+        if (lengte < 0 || breedte < 0 || lengte < breedte) {
+            throw new IllegalArgumentException();
+        } else {
+            this.lengte = lengte;
+            this.breedte = breedte;
+        }
     }
 
     public int getOppervlakte() {
