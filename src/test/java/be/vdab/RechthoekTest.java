@@ -22,4 +22,13 @@ class RechthoekTest {
     void deOmtrekVanEenRechthoekLengte4Breedte3Is14() {
         assertThat(rechthoek.getOmtrek()).isEqualTo(14);
     }
+
+    @Test
+    void recthoekenMetHetzelfdeLengteEnBreedteZijnGelijk() {
+        assertThat(new Rechthoek(3,5)).isEqualTo(new Rechthoek(3,5));
+    }
+    @Test
+    void recthoekenMetVerschillendLengteOfBreedteZijnVerschillend() {
+        assertThat(new Rechthoek(3,5)).isNotEqualTo(new Rechthoek(3,6));
+    }
 }
