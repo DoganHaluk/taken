@@ -1,4 +1,4 @@
-package be.vdab;
+package be.vdab.winst;
 
 import java.math.BigDecimal;
 

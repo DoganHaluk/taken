@@ -1,4 +1,7 @@
-package be.vdab;
+package be.vdab.winst;
+
+import be.vdab.winst.KostRepository;
+import be.vdab.winst.OpbrengstRepository;
 
 import java.math.BigDecimal;
 
