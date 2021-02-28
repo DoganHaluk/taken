@@ -6,7 +6,6 @@ import java.util.stream.Stream;
 
 public class WoordTeller {
     private final String zin;
-    private String[] woorden;
 
     public WoordTeller(String zin) {
         this.zin = zin;
