@@ -15,7 +15,6 @@ public class WoordTeller {
     public long getAantalWoorden() {
         return Stream.of(zin)
                 .map(woorden -> woorden.toLowerCase().split(" "))
-                //.map(woorden -> woorden)
                 .flatMap(array -> Arrays.stream(array))
                 .filter(woorden -> woorden.length() > 0)
                 .distinct()
