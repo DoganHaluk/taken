@@ -1,4 +1,6 @@
-import org.assertj.core.api.PredicateAssert;
+package be.vdab;
+
+import be.vdab.Periode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
